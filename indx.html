@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrix Array</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="heading">
+        <h1>Matrix Addition</h1>
+    </div>
+    <div class="main-container">
+           
+        <div class="first">
+
+
+           <div class="row row1">
+               <input type="number" placeholder="0" id="m1_row1_c1">
+               <input type="number" placeholder="0" id="m1_row1_c2">
+               <input type="number" placeholder="0" id="m1_row1_c3">
+           </div>
+
+           <div class="row row2">
+            <input type="number" placeholder="0" id="m1_row2_c1">
+            <input type="number" placeholder="0" id="m1_row2_c2">
+            <input type="number" placeholder="0" id="m1_row2_c3">
+        </div>
+
+        <div class="row row3">
+            <input type="number" placeholder="0" id="m1_row3_c1">
+            <input type="number" placeholder="0" id="m1_row3_c2">
+            <input type="number" placeholder="0" id="m1_row3_c3">
+        </div>
+
+
+
+
+        </div>
+
+        <div class="second">
+
+           <h1 class="plus">+</h1>
+        </div>
+
+        <div class="third">
+            <div class="row row2">
+               <input type="number" placeholder="0" id="m2_row1_c1">
+               <input type="number" placeholder="0" id="m2_row1_c2">
+               <input type="number" placeholder="0" id="m2_row1_c3">
+           </div>
+
+           <div class="row row2">
+            <input type="number" placeholder="0" id="m2_row2_c1">
+            <input type="number" placeholder="0" id="m2_row2_c2">
+            <input type="number" placeholder="0" id="m2_row2_c3">
+        </div>
+
+        <div class="row row3">
+            <input type="number" placeholder="0" id="m2_row3_c1">
+            <input type="number" placeholder="0" id="m2_row3_c2">
+            <input type="number" placeholder="0" id="m2_row3_c3">
+        </div>
+        </div>
+
+        <div class="equal">
+
+            <h1 class="equal2" onclick="cal()">=</h1>
+         </div>
+
+        <div class="fourth">
+            <div class="row row2">
+                <input type="number" placeholder="0" id="m3_row1_c1">
+                <input type="number" placeholder="0" id="m3_row1_c2">
+                <input type="number" placeholder="0" id="m3_row1_c3">
+            </div>
+ 
+            <div class="row row2">
+             <input type="number" placeholder="0" id="m3_row2_c1">
+             <input type="number" placeholder="0" id="m3_row2_c2">
+             <input type="number" placeholder="0" id="m3_row2_c3">
+         </div>
+ 
+         <div class="row row3">
+             <input type="number" placeholder="0" id="m3_row3_c1">
+             <input type="number" placeholder="0" id="m3_row3_c2">
+             <input type="number" placeholder="0" id="m3_row3_c3">
+         </div>
+        </div>
+
+    
+    </div>
+
+
+</body>
+
+<script>
+    function cal(){
+        let m1_row1_c1 = Number(document.getElementById("m1_row1_c1").value);
+        let m1_row1_c2= Number(document.getElementById("m1_row1_c2").value);
+        let m1_row1_c3= Number(document.getElementById("m1_row1_c3").value);
+        let m1_row2_c1= Number(document.getElementById("m1_row2_c1").value);
+        let m1_row2_c2= Number(document.getElementById("m1_row2_c2").value);
+        let m1_row2_c3= Number(document.getElementById("m1_row2_c3").value);
+        let m1_row3_c1= Number(document.getElementById("m1_row3_c1").value);
+        let m1_row3_c2= Number(document.getElementById("m1_row3_c2").value);
+        let m1_row3_c3= Number(document.getElementById("m1_row3_c3").value);
+
+
+        let m2_row1_c1= Number(document.getElementById("m2_row1_c1").value);
+        let m2_row1_c2= Number(document.getElementById("m2_row1_c2").value);
+        let m2_row1_c3= Number(document.getElementById("m2_row1_c3").value);
+        let m2_row2_c1= Number(document.getElementById("m2_row2_c1").value);
+        let m2_row2_c2= Number(document.getElementById("m2_row2_c2").value);
+        let m2_row2_c3= Number(document.getElementById("m2_row2_c3").value);
+        let m2_row3_c1 = Number(document.getElementById("m2_row3_c1").value);
+        let m2_row3_c2= Number(document.getElementById("m2_row3_c2").value);
+        let m2_row3_c3= Number(document.getElementById("m2_row3_c3").value);
+
+
+        let m1 = [
+            [m1_row1_c1,m1_row1_c2,m1_row1_c3],
+            [m1_row2_c1,m1_row2_c2,m1_row2_c3],
+            [m1_row3_c1,m1_row3_c2,m1_row3_c3],
+            
+        ]
+
+        let m2 = [
+            [m2_row1_c1,m2_row1_c2,m2_row1_c3],
+            [m2_row2_c1,m2_row2_c2,m2_row2_c3],
+            [m2_row3_c1,m2_row3_c2,m2_row3_c3],
+        ]
+        console.log(m1);
+        console.log(m2);
+
+        let m3 = [
+            [],
+            [],
+            [],
+        ]
+
+        for(let i = 0; i < m1.length ; i++){
+            for(let j = 0; j < m2.length ; j++){
+            m3[i][j] = m1[i][j] + m2[i][j]
+        }
+    }
+    console.log(m3);
+
+    document.getElementById("m3_row1_c1").value = m3[0][0];
+    document.getElementById("m3_row1_c2").value = m3[0][1];
+    document.getElementById("m3_row1_c3").value = m3[0][2];
+    document.getElementById("m3_row2_c1").value = m3[1][0];
+    document.getElementById("m3_row2_c2").value = m3[1][1];
+    document.getElementById("m3_row2_c3").value = m3[1][2];
+    document.getElementById("m3_row3_c1").value = m3[2][0];
+    document.getElementById("m3_row3_c2").value = m3[2][1];
+    document.getElementById("m3_row3_c3").value = m3[2][2];
+}
+
+</script>
+</html>

@@ -1,0 +1,99 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    
+}
+
+body{
+    background-color: #000;
+    background-color: #fff;
+    color: black;
+}
+
+.heading{
+    color: white;
+    color: black;
+    text-align: center;
+    margin-top: 70px;
+}
+
+.main-container{
+    display: flex;
+    grid-template-columns: repeat(5,1fr);
+    justify-content: space-around;
+   margin-top: 150px;
+   align-items: center;
+   
+}
+
+.first{
+    /* background-color: aqua; */
+    height: 250px;
+    width: 250px;
+    padding: 35px;
+}
+.second{
+    /* background-color: lightgreen; */
+    height: 250px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: white
+    color: black;
+}
+.third{
+    /* background-color: lightcoral; */
+    height: 250px;
+    width: 250px;
+    /* margin-left: -200px; */
+    padding: 35px;
+}
+.fourth{
+    /* background-color: pink; */
+    height: 250px;
+    width: 250px;
+    /* margin-left: -400px; */
+    padding: 35px;
+}
+
+
+.row{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 1.5rem;
+}
+
+.row > input{
+    width: 40px;
+    height: 40px;
+    margin-bottom: 15px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid red;
+}
+
+.equal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    /* margin-left: -600px; */
+   
+}
+
+.equal .equal2{
+    cursor: pointer;
+    color: white
+    color: black;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    
+}
